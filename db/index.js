@@ -1,20 +1,18 @@
-'use strict':
+'use strict';
 
 const promise = require('bluebird');
 const repos = {
   animals: require('./repos/animals'),
   captures: require('./repos/captures'),
-  devices: require('./repos/devices'),
-  deployments: require('./repos/deployments')
+  devices: require('./repos/devices')
 };
 
 const options = {
-  promiseLab: promise,
+  promiseLib: promise,
   extend: obj => {
     obj.animals = repos.animals(obj, pgp);
     obj.captures = repos.captures(obj,pgp);
     obj.devices = repos.devices(obj, pgp);
-    deployments = repos.deployments(obj, pgp);
   }
 };
 
