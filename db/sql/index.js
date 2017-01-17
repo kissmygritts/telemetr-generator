@@ -33,6 +33,12 @@ module.exports = {
     create: sql('relocations/create.sql')
   },
   triggers: {
-    parseCaptures: sql('triggers/parseCapture.sql')
+    parseCaptures: sql('triggers/parseCapture.sql'),
+    updatedAt: sql('triggers/updatedAt.sql'),
+    gpsToRelocations: sql('triggers/gpsToRelocations.sql'),
+    createGeom: sql('triggers/createGeom.sql')
+  },
+  views: {
+    collarDeployments: sql('views/collarDeployments.sql')
   }
 };

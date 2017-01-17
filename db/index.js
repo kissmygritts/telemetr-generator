@@ -9,7 +9,8 @@ const repos = {
   validityCodes: require('./repos/validityCodes'),
   gps: require('./repos/gps'),
   relocations: require('./repos/relocations'),
-  triggers: require('./repos/triggers')
+  triggers: require('./repos/triggers'),
+  views: require('./repos/views')
 };
 
 const options = {
@@ -23,6 +24,7 @@ const options = {
     obj.gps = repos.gps(obj, pgp);
     obj.relocations = repos.relocations(obj, pgp);
     obj.triggers = repos.triggers(obj, pgp);
+    obj.views = repos.views(obj, pgp);
   }
 };
 

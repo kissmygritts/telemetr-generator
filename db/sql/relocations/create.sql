@@ -1,6 +1,6 @@
 CREATE TABLE relocations (
   id serial PRIMARY KEY,
-  raw_gps_id integer REFERENCES gps(id),
+  gps_id integer REFERENCES gps(id),
   animal_id integer REFERENCES animals(id),
   device_id integer REFERENCES devices(id),
   acq_time_utc timestamp with time zone,

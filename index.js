@@ -4,16 +4,26 @@ const express = require('express');
 const db = require('./db').db;
 const app = express();
 
-// routes
+// CREATE ROUTES:
+// TODO: All of these routes should be POST rather than GET to better conform to HTTP standards
+// tables
 GET('/animals/create', () => db.animals.create());
 GET('/captures/create', () => db.captures.create());
 GET('/devices/create', () => db.devices.create());
 GET('/deployments/create', () => db.deployments.create());
 GET('/validity_codes/create', () => db.validityCodes.create());
-GET('/validity_codes/init', () => db.validityCodes.init());   // TODO: this needs to be a POST request
+GET('/validity_codes/init', () => db.validityCodes.init());
 GET('/gps/create', () => db.gps.create());
 GET('/relocations/create', () => db.relocations.create());
+
+// triggers
 GET('/triggers/parse_captures', () => db.triggers.parseCaptures());
+GET('/triggers/updated_at', () => db.triggers.updatedAt());
+GET('/triggers/gps_to_relocations', () => db.triggers.gpsToRelocations());
+GET('/triggers/create_geom', () => db.triggers.createGeom());
+
+// views
+GET('/views/collar_deployments', () => db.views.collarDeployments());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {
