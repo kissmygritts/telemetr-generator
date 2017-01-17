@@ -5,7 +5,10 @@ const repos = {
   animals: require('./repos/animals'),
   captures: require('./repos/captures'),
   devices: require('./repos/devices'),
-  deployments: require('./repos/devices')
+  deployments: require('./repos/deployments'),
+  validityCodes: require('./repos/validityCodes'),
+  gps: require('./repos/gps'),
+  relocations: require('./repos/relocations')
 };
 
 const options = {
@@ -15,9 +18,9 @@ const options = {
     obj.captures = repos.captures(obj,pgp);
     obj.devices = repos.devices(obj, pgp);
     obj.deployments = repos.deployments(obj, pgp);
-    obj.validity_codes = repos.validity_codes(obj, pgp);
+    obj.validityCodes = repos.validityCodes(obj, pgp);
     obj.gps = repos.gps(obj, pgp);
-    obj.relocations = repos.gps(obj, pgp);
+    obj.relocations = repos.relocations(obj, pgp);
   }
 };
 

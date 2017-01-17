@@ -8,10 +8,10 @@ GET('/animals/create', () => db.animals.create());
 GET('/captures/create', () => db.captures.create());
 GET('/devices/create', () => db.devices.create());
 GET('/deployments/create', () => db.deployments.create());
-GET('/validity_codes/create', () => db.validity_codes.create());
-GET('/validity_codes/init', () => db.validity_codes.init());
+GET('/validity_codes/create', () => db.validityCodes.create());
+GET('/validity_codes/init', () => db.validityCodes.init());   // TODO: this needs to be a POST request
 GET('/gps/create', () => db.gps.create());
-GET('/relocations/create', () => db.gps.create());
+GET('/relocations/create', () => db.relocations.create());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {

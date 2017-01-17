@@ -22,9 +22,9 @@ module.exports = {
   deployments: {
     create: sql('deployments/create.sql')
   },
-  validity_codes: {
-    create: sql('validity_codes/create.sql'),
-    init: sql('validity_codes/create.sql')
+  validityCodes: {
+    create: sql('validityCodes/create.sql'),
+    init: sql('validityCodes/init.sql')
   },
   gps: {
     create: sql('gps/create.sql')
