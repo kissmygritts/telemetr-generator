@@ -7,6 +7,11 @@ const app = express();
 GET('/animals/create', () => db.animals.create());
 GET('/captures/create', () => db.captures.create());
 GET('/devices/create', () => db.devices.create());
+GET('/deployments/create', () => db.deployments.create());
+GET('/validity_codes/create', () => db.validity_codes.create());
+GET('/validity_codes/init', () => db.validity_codes.init());
+GET('/gps/create', () => db.gps.create());
+GET('/relocations/create', () => db.gps.create());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {

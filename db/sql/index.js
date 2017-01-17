@@ -18,5 +18,19 @@ module.exports = {
   },
   devices: {
     create: sql('devices/create.sql')
+  },
+  deployments: {
+    create: sql('deployments/create.sql')
+  },
+  validity_codes: {
+    create: sql('validity_codes/create.sql'),
+    init: sql('validity_codes/create.sql')
+  },
+  gps: {
+    create: sql('gps/create.sql')
+  },
+  relocations: {
+    create: sql('relocations/create.sql')
   }
+
 };
