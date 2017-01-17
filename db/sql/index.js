@@ -44,6 +44,7 @@ module.exports = {
   dbase: {
     init: sql('dbase/init.sql'),
     triggers: sql('dbase/triggers.sql'),
-    seed: sql('dbase/seed.sql')
+    seed: sql('dbase/seed.sql'),
+    gps: sql('dbase/gps.sql')
   }
 };

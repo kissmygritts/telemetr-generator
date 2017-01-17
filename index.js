@@ -28,7 +28,8 @@ GET('/views/collar_deployments', () => db.views.collarDeployments());
 // bootstrap the database creation, triggers/functions, and seed some data
 GET('/telemetr/init', () => db.dbase.init());
 GET('/telemetr/triggers', () => db.dbase.triggers());
-GET('/telemetr/seed', () => db.dbase.seed());
+GET('/telemetr/seed/animals', () => db.dbase.seed());
+GET('/telemetr/seed/gps', () => db.dbase.gps());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {
