@@ -43,6 +43,7 @@ module.exports = {
   },
   dbase: {
     init: sql('dbase/init.sql'),
-    triggers: sql('dbase/triggers.sql')
+    triggers: sql('dbase/triggers.sql'),
+    seed: sql('dbase/seed.sql')
   }
 };

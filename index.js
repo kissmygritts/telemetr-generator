@@ -25,9 +25,10 @@ GET('/triggers/create_geom', () => db.triggers.createGeom());
 // views
 GET('/views/collar_deployments', () => db.views.collarDeployments());
 
-// bootstrap the database creation
+// bootstrap the database creation, triggers/functions, and seed some data
 GET('/telemetr/init', () => db.dbase.init());
 GET('/telemetr/triggers', () => db.dbase.triggers());
+GET('/telemetr/seed', () => db.dbase.seed());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {
