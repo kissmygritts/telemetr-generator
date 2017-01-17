@@ -40,5 +40,9 @@ module.exports = {
   },
   views: {
     collarDeployments: sql('views/collarDeployments.sql')
+  },
+  dbase: {
+    init: sql('dbase/init.sql'),
+    triggers: sql('dbase/triggers.sql')
   }
 };

@@ -7,4 +7,4 @@ CREATE TABLE deployments (
   created_at timestamp with time zone default now(),
   updated_at timestamp with time zone default now(),
   UNIQUE (animal_id, device_id)
-)
+);

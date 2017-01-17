@@ -10,7 +10,8 @@ const repos = {
   gps: require('./repos/gps'),
   relocations: require('./repos/relocations'),
   triggers: require('./repos/triggers'),
-  views: require('./repos/views')
+  views: require('./repos/views'),
+  dbase: require('./repos/dbase')
 };
 
 const options = {
@@ -25,6 +26,7 @@ const options = {
     obj.relocations = repos.relocations(obj, pgp);
     obj.triggers = repos.triggers(obj, pgp);
     obj.views = repos.views(obj, pgp);
+    obj.dbase = repos.dbase(obj, pgp);
   }
 };
 
