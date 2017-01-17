@@ -31,6 +31,8 @@ module.exports = {
   },
   relocations: {
     create: sql('relocations/create.sql')
+  },
+  triggers: {
+    parseCaptures: sql('triggers/parseCapture.sql')
   }
-
 };

@@ -4,6 +4,7 @@ const express = require('express');
 const db = require('./db').db;
 const app = express();
 
+// routes
 GET('/animals/create', () => db.animals.create());
 GET('/captures/create', () => db.captures.create());
 GET('/devices/create', () => db.devices.create());
@@ -12,6 +13,7 @@ GET('/validity_codes/create', () => db.validityCodes.create());
 GET('/validity_codes/init', () => db.validityCodes.init());   // TODO: this needs to be a POST request
 GET('/gps/create', () => db.gps.create());
 GET('/relocations/create', () => db.relocations.create());
+GET('/triggers/parse_captures', () => db.triggers.parseCaptures());
 
 function GET(url, handler) {
   app.get(url, (req, res) => {

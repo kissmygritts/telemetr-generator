@@ -8,7 +8,8 @@ const repos = {
   deployments: require('./repos/deployments'),
   validityCodes: require('./repos/validityCodes'),
   gps: require('./repos/gps'),
-  relocations: require('./repos/relocations')
+  relocations: require('./repos/relocations'),
+  triggers: require('./repos/triggers')
 };
 
 const options = {
@@ -21,6 +22,7 @@ const options = {
     obj.validityCodes = repos.validityCodes(obj, pgp);
     obj.gps = repos.gps(obj, pgp);
     obj.relocations = repos.relocations(obj, pgp);
+    obj.triggers = repos.triggers(obj, pgp);
   }
 };
 

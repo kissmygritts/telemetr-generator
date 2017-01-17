@@ -35,3 +35,9 @@
 
 10:29:12 error: relation "raw_gps" does not exist
          query: CREATE TABLE relocations ( id serial PRIMARY KEY, raw_gps_id integer REFERENCES raw_gps(id), animal_id integer REFERENCES animals(id), device_id integer REFERENCES devices(id), acq_time_utc timestamp with time zone, acq_time_lcl timestamp with time zone, latitude numeric, longitude numeric, geom geometry(Point, 4326), altitude numeric, validity_code integer REFERENCES validity_codes(code) DEFAULT 1, easting numeric, norhting numeric, utm_srid integer, created_at timestamp with time zone DEFAULT now(), updated_at timestamp with time zone DEFAULT now() );
+
+10:49:29 error: ENOENT: no such file or directory, open '/Users/mitchellgritts/Documents/telemetr/telemetr-generator/db/sql/triggers/parseCaptures'
+         query: /Users/mitchellgritts/Documents/telemetr/telemetr-generator/db/sql/triggers/parseCaptures
+
+10:50:16 error: ENOENT: no such file or directory, open '/Users/mitchellgritts/Documents/telemetr/telemetr-generator/db/sql/triggers/parseCaptures.sql'
+         query: /Users/mitchellgritts/Documents/telemetr/telemetr-generator/db/sql/triggers/parseCaptures.sql
