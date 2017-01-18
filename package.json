@@ -7,11 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js"
   },
-  "author": "Mitchell Gritts",
+  "author": "Mitchell Gritts <mitchellgritts@gmail.com> (http://mgritts.com)",
   "license": "ISC",
   "repository" : {
     "type": "git",
     "url": "https://github.com/kissmygritts/telemetr-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/kissmygritts/telemetr-generator/issues"
   },
   "dependencies": {
     "bluebird": "^3.4.7",
