@@ -39,7 +39,11 @@ module.exports = {
     createGeom: sql('triggers/createGeom.sql')
   },
   views: {
-    collarDeployments: sql('views/collarDeployments.sql')
+    collarDeployments: sql('views/collarDeployments.sql'),
+    gpsDeployments: sql('views/gpsDeployment.sql'),
+    relocationSteps: sql('views/relocationSteps.sql'),
+    relocationsValidityCount: sql('views/relocationsValidityCount.sql'),
+    relocationsCount: sql('views/relocationsCount.sql')
   },
   dbase: {
     init: sql('dbase/init.sql'),

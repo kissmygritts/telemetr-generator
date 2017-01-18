@@ -24,6 +24,10 @@ GET('/triggers/create_geom', () => db.triggers.createGeom());
 
 // views
 GET('/views/collar_deployments', () => db.views.collarDeployments());
+GET('/views/gps_deployments', () => db.views.gpsDeployments());
+GET('/views/relocations_count', () => db.views.relocationsCount());
+GET('/views/relocation_steps', () => db.views.relocationSteps());
+GET('/views/relocations_validity_count', () => db.views.relocationsValidityCount());
 
 // bootstrap the database creation, triggers/functions, and seed some data
 GET('/telemetr/init', () => db.dbase.init());
