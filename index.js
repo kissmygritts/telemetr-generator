@@ -38,7 +38,7 @@ GET('/telemetr/seed/gps', () => db.dbase.gps());
 function GET(url, handler) {
   app.get(url, (req, res) => {
     handler(req)
-    .then(data => res.status(200).json({ success: true, data: data }))
+    .then(data => res.status(200).json({ success: true, msg: 'relation successfully created' }))
     .catch(err => res.status(400).json({ success: false, error: err.message || err }));
   });
 }

@@ -34,7 +34,7 @@ const options = {
 const config = {
   host: 'localhost',
   port: 5432,
-  database: 'telemetr_gen_test'
+  database: 'telemetr_pres'
 };
 
 const pgp = require('pg-promise')(options);
