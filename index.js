@@ -32,6 +32,7 @@ GET('/views/relocations_validity_count', () => db.views.relocationsValidityCount
 // bootstrap the database creation, triggers/functions, and seed some data
 GET('/telemetr/init', () => db.dbase.init());
 GET('/telemetr/triggers', () => db.dbase.triggers());
+GET('/telemetr/views', () => db.dbase.views());
 GET('/telemetr/seed/animals', () => db.dbase.seed());
 GET('/telemetr/seed/gps', () => db.dbase.gps());
 

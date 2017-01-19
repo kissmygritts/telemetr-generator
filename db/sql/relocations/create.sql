@@ -13,6 +13,8 @@ CREATE TABLE relocations (
   easting numeric,
   norhting numeric,
   utm_srid integer,
+  activity numeric,
+  temperature numeric,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now()
 );

@@ -114,7 +114,9 @@ acq_time_utc,
 acq_time_lcl,
 longitude,
 latitude,
-altitude
+altitude,
+activity,
+temperature
 )
 SELECT
 NEW.id AS gps_id,
@@ -124,7 +126,9 @@ NEW.acq_time_utc,
 NEW.acq_time_lcl,
 NEW.longitude,
 NEW.latitude,
-NEW.altitude
+NEW.altitude,
+NEW.activity,
+NEW.temperature
 FROM deployments, devices
 WHERE
 NEW.serial_num = devices.serial_num AND
