@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": null,
+    "password": null,
+    "database": "telemetr_dev",
+    "host": "127.0.0.1",
+    "port": 5432
+  },
+  "test": {
+    "username": null,
+    "password": null,
+    "database": "telemetr_test",
+    "host": "127.0.0.1",
+    "port": 5432
+  },
+  "production": {
+    "username": null,
+    "password": null,
+    "database": "telemetr_prod",
+    "host": "127.0.0.1",
+    "port": 5432
+  }
+}

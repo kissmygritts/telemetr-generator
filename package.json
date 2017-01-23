@@ -4,8 +4,9 @@
   "description": "bootstrap database creation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "dev": "NODE_ENV=development node index.js",
+    "test": "NODE_ENV=test node index.js",
+    "prod": "NODE_ENV=production node index.js"
   },
   "author": "Mitchell Gritts <mitchellgritts@gmail.com> (http://mgritts.com)",
   "license": "ISC",

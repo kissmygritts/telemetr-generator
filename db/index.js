@@ -1,6 +1,8 @@
-'use strict';
+'use strict'
 
-const promise = require('bluebird');
+const promise = require('bluebird')
+const env = process.env.NODE_ENV
+const config = require('../config/database.json')[env]
 const repos = {
   animals: require('./repos/animals'),
   captures: require('./repos/captures'),
@@ -12,8 +14,9 @@ const repos = {
   triggers: require('./repos/triggers'),
   views: require('./repos/views'),
   dbase: require('./repos/dbase')
-};
+}
 
+// TODO: change this to be a loop
 const options = {
   promiseLib: promise,
   extend: obj => {
@@ -28,18 +31,11 @@ const options = {
     obj.views = repos.views(obj, pgp);
     obj.dbase = repos.dbase(obj, pgp);
   }
-};
+}
 
-// database config, pull this out as connection string
-const config = {
-  host: 'localhost',
-  port: 5432,
-  database: 'telemetr_pres'
-};
+const pgp = require('pg-promise')(options)
+const db = pgp(config)
+const diag = require('./diagnostics')
+diag.init(options)
 
-const pgp = require('pg-promise')(options);
-const db = pgp(config);
-const diag = require('./diagnostics');
-diag.init(options);
-
-module.exports = { pgp, db };
+module.exports = { pgp, db }

@@ -1,8 +1,8 @@
 COPY gps (
   serial_num,
   acq_time_lcl,
-  longitude,
   latitude,
+  longitude,
   altitude,
   hdop,
   temperature,
