@@ -1,6 +1,6 @@
 {
   "name": "telemetr-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "bootstrap database creation.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "author": "Mitchell Gritts <mitchellgritts@gmail.com> (http://mgritts.com)",
   "license": "ISC",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/kissmygritts/telemetr-generator"
   },
